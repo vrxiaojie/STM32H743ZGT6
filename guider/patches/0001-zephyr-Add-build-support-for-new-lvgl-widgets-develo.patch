@@ -1,0 +1,66 @@
+From 470d068dec18baf1831089a43af623116cfa1cad Mon Sep 17 00:00:00 2001
+From: Zongchun Yu <zongchun.yu@nxp.com>
+Date: Mon, 17 Jun 2024 17:12:29 +0800
+Subject: [PATCH] zephyr: Add build support for new lvgl widgets developed by
+ NXP
+
+Signed-off-by: Zongchun Yu <zongchun.yu@nxp.com>
+---
+ modules/lvgl/CMakeLists.txt | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/modules/lvgl/CMakeLists.txt b/modules/lvgl/CMakeLists.txt
+index a78950e4322..ff4053a03be 100644
+--- a/modules/lvgl/CMakeLists.txt
++++ b/modules/lvgl/CMakeLists.txt
+@@ -93,12 +93,15 @@ zephyr_library_sources(
+ 
+     ${LVGL_DIR}/src/extra/layouts/flex/lv_flex.c
+     ${LVGL_DIR}/src/extra/layouts/grid/lv_grid.c
++    ${LVGL_DIR}/src/extra/libs/barcode/code128.c
++    ${LVGL_DIR}/src/extra/libs/barcode/lv_barcode.c
+     ${LVGL_DIR}/src/extra/libs/bmp/lv_bmp.c
+     ${LVGL_DIR}/src/extra/libs/ffmpeg/lv_ffmpeg.c
+     ${LVGL_DIR}/src/extra/libs/freetype/lv_freetype.c
+     ${LVGL_DIR}/src/extra/libs/fsdrv/lv_fs_fatfs.c
+     ${LVGL_DIR}/src/extra/libs/fsdrv/lv_fs_littlefs.c
+     ${LVGL_DIR}/src/extra/libs/fsdrv/lv_fs_posix.c
++    ${LVGL_DIR}/src/extra/libs/fsdrv/lv_fs_rawfs.c
+     ${LVGL_DIR}/src/extra/libs/fsdrv/lv_fs_stdio.c
+     ${LVGL_DIR}/src/extra/libs/fsdrv/lv_fs_win32.c
+     ${LVGL_DIR}/src/extra/libs/gif/gifdec.c
+@@ -123,24 +126,31 @@ zephyr_library_sources(
+     ${LVGL_DIR}/src/extra/themes/basic/lv_theme_basic.c
+     ${LVGL_DIR}/src/extra/themes/default/lv_theme_default.c
+     ${LVGL_DIR}/src/extra/themes/mono/lv_theme_mono.c
++    ${LVGL_DIR}/src/extra/widgets/analogclock/lv_analogclock.c
+     ${LVGL_DIR}/src/extra/widgets/animimg/lv_animimg.c
+     ${LVGL_DIR}/src/extra/widgets/calendar/lv_calendar.c
+     ${LVGL_DIR}/src/extra/widgets/calendar/lv_calendar_header_arrow.c
+     ${LVGL_DIR}/src/extra/widgets/calendar/lv_calendar_header_dropdown.c
++    ${LVGL_DIR}/src/extra/widgets/carousel/lv_carousel.c
+     ${LVGL_DIR}/src/extra/widgets/chart/lv_chart.c
+     ${LVGL_DIR}/src/extra/widgets/colorwheel/lv_colorwheel.c
++    ${LVGL_DIR}/src/extra/widgets/dclock/lv_dclock.c
+     ${LVGL_DIR}/src/extra/widgets/imgbtn/lv_imgbtn.c
+     ${LVGL_DIR}/src/extra/widgets/keyboard/lv_keyboard.c
++    ${LVGL_DIR}/src/extra/widgets/keyboard/lv_zh_keyboard.c
+     ${LVGL_DIR}/src/extra/widgets/led/lv_led.c
+     ${LVGL_DIR}/src/extra/widgets/list/lv_list.c
+     ${LVGL_DIR}/src/extra/widgets/menu/lv_menu.c
+     ${LVGL_DIR}/src/extra/widgets/meter/lv_meter.c
+     ${LVGL_DIR}/src/extra/widgets/msgbox/lv_msgbox.c
++    ${LVGL_DIR}/src/extra/widgets/radiobtn/lv_radiobtn.c
+     ${LVGL_DIR}/src/extra/widgets/span/lv_span.c
+     ${LVGL_DIR}/src/extra/widgets/spinbox/lv_spinbox.c
+     ${LVGL_DIR}/src/extra/widgets/spinner/lv_spinner.c
+     ${LVGL_DIR}/src/extra/widgets/tabview/lv_tabview.c
++    ${LVGL_DIR}/src/extra/widgets/textprogress/lv_textprogress.c
+     ${LVGL_DIR}/src/extra/widgets/tileview/lv_tileview.c
++    ${LVGL_DIR}/src/extra/widgets/video/lv_video.c
+     ${LVGL_DIR}/src/extra/widgets/win/lv_win.c
+ 
+     ${LVGL_DIR}/src/font/lv_font.c
+-- 
+2.34.1
+
