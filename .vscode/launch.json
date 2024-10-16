@@ -1,0 +1,25 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceRoot}", // 输出路径
+            "executable": "./MDK-ARM\\build\\STM32H743ZGT6\\STM32H743ZGT6.axf", // 要调试的程序
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd", // 调试器选择
+            //"device": "STM32H743ZG", // 使用J-link GDB Server时必须；其他GBD Server时可选（有可能帮助自动选择 SVD文件）。支持的设备见 https://www.segger.com/downloads/supported-devices.php
+            "svdFile": "./STM32H743.svd", // svd文件，有这个文件才能查看寄存器的值，每个单片机都不同。可以在以下地址找到 https://github.com/posborne/cmsis-svd下载
+            "interface": "swd",
+            "configFiles": [
+                //"${workspaceRoot}/openocd.cfg", // *可以通过加载该文件来配置
+                "./stlink.cfg",
+                "./stm32h7x.cfg"
+            ],
+            "runToMain": true,
+        }
+    ]
+}

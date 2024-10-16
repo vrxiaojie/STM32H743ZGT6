@@ -1,0 +1,37 @@
+[project_search_path]: ./
+[map_search_path]: ./
+[project_file_path]: .//STM32H743ZGT6.uvprojx
+[ map_file_path]: .//build/STM32H743ZGT6/STM32H743ZGT6.map
+[parse_keil_map start]: 
+[Found keyword]: ----------Execution Region----------
+[name]:  ER_IROM1 
+[Base]: 0x8000000
+[Size]: 0xaac48
+[Max]: 0x200000
+[Found keyword]: ----------Execution Region----------
+[name]:  RW_IRAM1 
+[Base]: 0x20000000
+[Size]: 0
+[Max]: 0x20000
+[Found keyword]: ----------Execution Region----------
+[name]:  RW_IRAM2 
+[Base]: 0x24000000
+[Size]: 0x486e0
+[Max]: 0x80000
+[Found keyword]: ----------Execution Region----------
+[name]:  ER$$.ARM.__AT_0xC0000000 
+[Base]: 0xc0000000
+[Size]: 0x13ec
+[Max]: 0x13ec
+[parse_keil_map over printf bar]: 
+  RW_IRAM1 :0x20000000
+  128.00 KB :|____________________|    0.00 % (    0.00 KB /   128.00 KB) [131072 B]
+  RW_IRAM2 :0x24000000
+  512.00 KB :|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_________|   56.59 % (  289.72 KB /   512.00 KB) [227616 B]
+  ER$$.ARM.__AT_0xC0000000 :0xc0000000
+    4.98 KB :|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö|  100.00 % (    4.98 KB /     4.98 KB) [0 B]
+  ER_IROM1 :0x8000000
+    2.00 MB :|¡ö¡ö¡ö¡ö¡ö¡ö______________|   33.35 % (    0.67 MB /     2.00 MB) [1397688 B]
+[export csv]: ./STM32H743ZGT6_sort_by_flash.csv
+[export csv]: ./STM32H743ZGT6_sort_by_ram.csv
+[export xlsx]: STM32H743ZGT6_analysis.xlsx
